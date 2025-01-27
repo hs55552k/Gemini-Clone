@@ -14,6 +14,12 @@ const Main = () => {
     input,
   } = useContext(Context);
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && input) {
+      onSent();
+    }
+  };
+
   return (
     <div className="main">
       <div className="nav">
@@ -39,7 +45,7 @@ const Main = () => {
                 <img src={assets.bulb_icon} alt="" />
               </div>
               <div className="card">
-                <p>Brainstorm team bonding activites for our work retreat</p>
+                <p>Brainstorm team bonding activities for our work retreat</p>
                 <img src={assets.message_icon} alt="" />
               </div>
               <div className="card">
@@ -75,6 +81,7 @@ const Main = () => {
               onChange={(e) => {
                 setInput(e.target.value);
               }}
+              onKeyDown={handleKeyDown}
               value={input}
               type="text"
               placeholder="Enter prompt here"

@@ -3,6 +3,7 @@
   min-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
+  transition: all 0.3s ease; /* Smooth transition for the entire main section */
 }
 
 .main .nav {
@@ -12,11 +13,17 @@
   font-size: 22px;
   padding: 20px;
   color: #585858;
+  transition: color 0.3s ease; /* Smooth color transition for nav text */
 }
 
 .main .nav img {
   width: 40px;
   border-radius: 50%;
+  transition: transform 0.3s ease; /* Add transition on hover for image */
+}
+
+.main .nav img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 .main .main-container {
@@ -25,11 +32,11 @@
 }
 
 .main .greet {
-  /* margin: 50px 0px;   */
   font-size: 56px;
   color: #c4c7c5;
   font-weight: 500;
   padding: 20px;
+  transition: color 0.3s ease; /* Smooth color transition for greeting text */
 }
 
 .main .greet span {
@@ -53,6 +60,12 @@
   border-radius: 10px;
   position: relative;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for card hover */
+}
+
+.main .card:hover {
+  background-color: #dfe4ea;
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .main .card img {
@@ -68,10 +81,6 @@
 .main .card p {
   color: #585858;
   font-size: 17px;
-}
-
-.main .card:hover {
-  background-color: #dfe4ea;
 }
 
 .main-bottom {
@@ -91,11 +100,17 @@
   background-color: #f0f4f9;
   padding: 10px 20px;
   border-radius: 50px;
+  transition: all 0.3s ease; /* Smooth transition for search box */
 }
 
 .search-box img {
   width: 24px;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for icons */
+}
+
+.search-box img:hover {
+  transform: scale(1.2); /* Slight zoom effect on icons */
 }
 
 .search-box input {
@@ -105,6 +120,7 @@
   outline: none;
   padding: 8px;
   font-size: 18px;
+  transition: all 0.3s ease; /* Smooth transition for input */
 }
 
 .search-box div {
@@ -178,6 +194,7 @@
   font-size: 17px;
   font-weight: 300;
   line-height: 1.8;
+  transition: color 0.3s ease; /* Smooth color transition for result text */
 }
 
 @media (max-width: 600px) {
@@ -191,7 +208,7 @@
   .search-box {
     padding: 5px 10px;
   }
-  .search-box div{
+  .search-box div {
     gap: 5px;
   }
 }

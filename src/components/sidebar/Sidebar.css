@@ -9,12 +9,22 @@
 
 .sidebar img {
   width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar img:hover {
+  transform: scale(1.2);
 }
 
 .sidebar .menu {
   display: block;
   margin-left: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .menu:hover {
+  transform: rotate(90deg);
 }
 
 .sidebar .new-chat {
@@ -28,6 +38,12 @@
   font-size: 14px;
   color: grey;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar .new-chat:hover {
+  background-color: #d9dee7;
+  transform: translateY(-2px);
 }
 
 .sidebar .recent {
@@ -50,10 +66,12 @@
   border-radius: 50px;
   color: #282828;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar .recent-entry:hover {
   background-color: #e2e6eb;
+  transform: translateX(5px);
 }
 
 .sidebar .bottom {
@@ -64,11 +82,16 @@
 .sidebar .bottom-item {
   padding-right: 10px;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width:600px) {
-  .sidebar{
+.sidebar .bottom-item:hover {
+  color: #4b90ff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .sidebar {
     display: none;
   }
-  
 }
